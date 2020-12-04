@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title>Salvador Martinez Espinosa, page.</title>
+    <style>
+        p {
+            font-family: 'helvetica neue', helvetica, sans-serif;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            text-align: center;
+            border: 2px solid rgba(0, 0, 200, 0.6);
+            background: rgba(151, 250, 22, 0.884);
+            color: rgba(31, 83, 252, 0.6);
+            box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
+            border-radius: 10px;
+            padding: 3px 10px;
+            display: inline-block;
+            cursor: pointer;
+            box-align: center;
+        }
+    </style>
+
+    <meta name="viewport" content="width=880">
+    <link href="dist/brick.css" type="text/css" rel="stylesheet" media="all and (max-width: 480px)">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <script src="dist/brick.js"></script>
+</head>
+
+<body>
+    <p>Salvador Martinez Espinosa, page.</p>
+
+    <script>
+        const para = document.querySelector('p');
+
+        para.addEventListener('click', updateName);
+
+        function updateName() {
+            let name = prompt('Introduce un nuevo componente');
+            para.textContent = 'Menciona algunos componentes electronicos: ' + name;
+        }
+    </script>
+
+    <nav>
+        <button class="takeBtn">Toma</button>
+        <button class="showBtn">Muestra</button>
+        <button class="galleryBtn">Galeria</button>
+    </nav>
+
+    <x-deck selected-index="0">
+        <x-card>
+            <video></video>
+            <button class="snap">Toma una foto</button>
+        </x-card>
+        <x-card>
+            <canvas class="canvas"></canvas>
+            <img src="" class="photo">
+            <button class="save">Guardala</button>
+        </x-card>
+        <x-card>
+
+        </x-card>
+    </x-deck>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
